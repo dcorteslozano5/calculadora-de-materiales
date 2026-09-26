@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scalable=1.0, minimum-scalable=1.0">
+    <meta http-equiv="X-UA-compatible" content="IE-edge">
+    <title>Crear cuenta - Calculadora de Materiales</title>
+    <meta name="description" content="Calculadora todo Tipo de Materiales">
+    <meta name="author" content="JHON ANDERSON MANTILLA">
+    <link rel="shortcut" href="google.png.svg">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <img class="logo" src="logo.png" alt="materialess">
+    <header>
+        <h1>Iniciar sesion</h1>
+
+        <form id="form-login">
+            <input type="text" name="usuario" placeholder="usuario o correo" required>
+            <input type="password" name="password" placeholder="Contrasena" required>
+            <button type="submit" class="btn-primary">Iniciar sesion</button>
+
+        </form>
+        <h2 class="vertical-text"><a href="recuperar.html">¿Olvidaste tu contraseña?</a></h2>
+
+
+
+        <p class="divider-text">O inicia sesion con</p>
+
+        <div class="social-icons">
+            <a href="https://accounts.google.com/signin" target="_blank"><img src="google.png.svg" alt="Google"></a>
+            <a href="https://www.facebook.com/login" target="_blank"><img src="facebook.png.svg" alt="Facebook"></a>
+            <a href="https://www.instagram.com/accounts/login" target="_blank"><img src="instagram-png.svg"
+                    alt="Instagram"></a>
+            <a href="https://twitter.com/login" target="_blank"><img src="x-twitter-brands-solid-full.svg"
+                    alt="Twitter"></a>
+        </div>
+
+        <p>¿No tienes cuenta? <a href="registro.html">Registrate aqui</a></p>
+
+    </header>
+    <script>
+        document.getElementById('form-login').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const usuario = e.target.usuario.value;
+            const password = e.target.password.value;
+
+            if (usuario && password) {
+                window.location.href = ("menu.html");
+            } else {
+                alert("Por favor complete todos los campos")
+            }
+        });
+    </script>
+
+</body>
+
+</html>

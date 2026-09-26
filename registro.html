@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scalable=1.0, minimum-scalable=1.0">
+    <meta http-equiv="X-UA-compatible" content="IE-edge">
+    <title>Iniciar sesion - Calculadora de Materiales</title>
+    <meta name="description" content="Calcular todo tipo de material">
+    <meta name="author" content="JHON ANDERSON MANTILLA">
+    <link rel="shortcut icon" href="google.png.svg">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <img class="logo" src="logo.png" alt="Materiales">
+    <header>
+        <h1>Crear cuenta</h1>
+
+        <form id="form-registro">
+            <input type="text" name="nombre" placeholder="Nombre completo" required>
+            <input type="email" name="correo" placeholder="Correo" required>
+            <input type="password" name="password" placeholder="Contraseña" required>
+            <button type="submit" class="btn-primary">Crear cuenta</button>
+        </form>
+
+        <p class="divider-text">O regístrate con</p>
+        <div class="social-icons">
+            <a href="https://accounts.google.com/signin" target="_blank"><img src="google.png.svg" alt="Google"></a>
+            <a href="https://www.facebook.com/login" target="_blank"><img src="facebook.png.svg" alt="Facebook"></a>
+            <a href="https://www.instagram.com/accounts/login" target="_blank"><img src="instagram-png.svg"
+                    alt="Instagram"></a>
+            <a href="https://twitter.com/login" target="_blank"><img src="x-twitter-brands-solid-full.svg"
+                    alt="Twitter"></a>
+        </div>
+
+        <p>¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a></p>
+    </header>
+
+    <script>
+        document.getElementById('form-registro').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const nombre = e.target.nombre.value;
+            const correo = e.target.correo.value;
+            const password = e.target.password.value;
+
+            if (nombre && correo && password) {
+                alert("Cuenta creada correctamente")
+                window.location.href = ("login.html")
+            } else {
+                alert("Complete todos los campos")
+            }
+        });
+    </script>
+
+</body>
+
+</html>

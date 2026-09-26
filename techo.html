@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=1.0, initial-scale=1.0, maximum-scalable=1.0, minimum-scalable=1.0">
+    <meta http-equiv="X-UA-compatible" content="IE-edge">
+    <title>techo - Calculadora de Materiales</title>
+    <meta name="description" content="Calcular todo tipo de Materiales">
+    <meta name="author" content="JHON ANDERSON MANTILLA">
+    <link rel="shortcut icon" href="google.png.svg">
+    <link rel="stylesheet" href="style.css">
+    <script src="calculadora.js" defer></script>
+
+</head>
+
+<body>
+    <img class="logo" src="logo.png" alt="Materiales">
+    <main class="calc-container" id="vista-formulario">
+        <h1> Calcular techo </h1>
+
+        <form id="form-techo">
+            <div class="input-group">
+                <label>espesor</label>
+                <input type="number" id="espesor" name="espesor" placeholder="ej: 1,0" required>
+            </div>
+            <div class="input-group">
+                <label>Largo (m)</label>
+                <input type="number" id="largo" name="largo" placeholder="ej: 5" required>
+            </div>
+
+            <div class="input-group">
+                <label> alto (m)</label>
+                <input type="number" id="alto" name="alto" placeholder="ej: 4" required>
+            </div>
+            <button type="submit" class="btn-calcular">Calcular</button>
+        </form>
+    </main>
+
+    <div class="calc-container" id="vista-resultado" style="display: none;">
+        <h1>Resultado</h1>
+        <h2 id="resultado-titulo">techo 4x5 m e= 0,1</h2>
+
+        <div class="resultado-grid">
+            <div class="resultado-card">
+                <span class="resultado-label">piedra</span>
+                <span class="resultado-valor" id="piedra">--</span>
+            </div>
+
+            <div class="resultado-card">
+                <span class="resultado-label">cemento</span>
+                <span class="resultado-valor" id="cemento"></span>
+            </div>
+
+            <div class="resultado-card">
+                <span class="resultado-label">arena</span>
+                <span class="resultado-valor" id="arena">--</span>
+            </div>
+
+            <div class="resultado-card">
+                <span class="resultado-label">hierro de 8 m</span>
+                <span class="resultado-valor" id="hierro8">--</span>
+            </div>
+
+            <div class="resultado-card">
+                <span class="resultado-label">hierro de 6 m</span>
+                <span class="resultado-valor" id="hierro6">--</span>
+            </div>
+
+            <div class="resultado-card">
+                <span class="resultado-label">superficie</span>
+                <span class="resultado-valor" id="superficie">--</span>
+            </div>
+        </div>
+        <button class="btn-calcular" onclick="window.location.href='menu.html'">Volver al menu</button>
+    </div>
+</body>
+
+</html>

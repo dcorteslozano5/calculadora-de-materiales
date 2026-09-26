@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular Muro - Calculadora de Materiales</title>
+    <meta name="description" content="Calcular todo tipo de material">
+    <meta name="author" content="JHON ANDERSON MANTILLA">
+    <link rel="shortcut icon" href="google.png.svg">
+    <link rel="stylesheet" href="style.css">
+    <script src="calculadora.js" defer></script>
+</head>
+
+<body>
+    <img class="logo" src="logo.png" alt="Materiales">
+
+    <main class="calc-container" id="vista-formulario">
+        <h1>Calcular muro</h1>
+
+        <form id="form-muro">
+            <div class="input-group">
+                <label>Espesor</label>
+                <div class="radio-options">
+                    <label><input type="radio" name="espesor" value="20" checked> 20 cm</label>
+                    <label><input type="radio" name="espesor" value="30"> 30 cm</label>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="largo">Largo (m)</label>
+                <input type="number" id="largo" name="largo" placeholder="Ej: 5" step="0.01" required>
+            </div>
+
+            <div class="input-group">
+                <label for="alto">Alto (m)</label>
+                <input type="number" id="alto" name="alto" placeholder="Ej: 2,5" step="0.01" required>
+            </div>
+
+            <button type="submit" class="btn-calcular">Calcular</button>
+        </form>
+    </main>
+
+    <div class="calc-container" id="vista-resultado" style="display:none;">
+        <h1>Resultado</h1>
+        <h2 id="resultado-titulo">Muro de 20 cm</h2>
+
+        <div class="resultado-grid">
+            <div class="resultado-card">
+                <span class="resultado-label">Superficie</span>
+                <span class="resultado-valor" id="valor-superficie">--</span>
+            </div>
+            <div class="resultado-card">
+                <span class="resultado-label">Cemento</span>
+                <span class="resultado-valor" id="valor-cemento">--</span>
+            </div>
+            <div class="resultado-card">
+                <span class="resultado-label">Arena</span>
+                <span class="resultado-valor" id="valor-arena">--</span>
+            </div>
+            <div class="resultado-card">
+                <span class="resultado-label">Ladrillos</span>
+                <span class="resultado-valor" id="valor-ladrillos">--</span>
+            </div>
+        </div>
+
+        <button class="btn-volver" onclick="window.location.href='menu.html'">← Volver Al Menú</button>
+    </div>
+</body>
+
+</html>
