@@ -1,4 +1,3 @@
-
 // ============================================
 // Elementos compartidos entre todas las vistas
 // ============================================
@@ -104,7 +103,6 @@ if (formcolumna) {
         document.getElementById('vista-resultado').style.display = 'block';
     });
 }
-
 
 // ============================================
 // CONTRAPISO
